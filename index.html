@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Picture This!</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,7 +14,39 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    <picture>
+      <source
+        media="(min-width: 960px)"
+        sizes="(min-width: 1600px) 800px, (min-width: 1280px) 640px, 480px"
+        srcset="
+          images/square-480w.jpg  480w,
+          images/square-640w.jpg  640w,
+          images/square-800w.jpg  800w,
+          images/square-960w.jpg  960w,
+          images/square-1280w.jpg 1280w,
+          images/square-1440w.jpg 1440w,
+          images/square-1600w.jpg 1600w,
+          images/square-1920w.jpg 1920w,
+          images/square-2400w.jpg 2400w
+        "
+      />
+
+      <source
+        media="(max-width: 959px)"
+        sizes="100vw"
+        srcset="
+          images/landscape-320w.jpg  320w,
+          images/landscape-480w.jpg  480w,
+          images/landscape-640w.jpg  640w,
+          images/landscape-720w.jpg  720w,
+          images/landscape-960w.jpg  960w,
+          images/landscape-1440w.jpg 1440w,
+          images/landscape-2160w.jpg 2160w
+        "
+      />
+
+      <img src="images/landscape-320w.jpg" alt="A beautiful museum">
+    </picture>
 
   </header>
 </body>
